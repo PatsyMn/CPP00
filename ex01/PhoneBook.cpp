@@ -24,10 +24,11 @@ void PhoneBook::addContact()
 {
 	if (_phonebookFull == true)
 	{
-		std::cout << PINK << "Phonebook's full. Kick out oldest and make drama?💋 (y/n)" << std::endl;
+		std::cout << ORANGE << "Phonebook's full. Kick out oldest and make drama?💋 (y/n)" << std::endl;
 		std::string input;
 		while (true)
 		{
+			std::getline(std::cin, input);
 			if (std::cin.eof())
 			{
 				std::cout << ORANGE << "Phonebook closed, silence is golden.✨" << std::endl;
@@ -43,7 +44,7 @@ void PhoneBook::addContact()
 				std::cout << PINK << "Contacts unchanged, no drama today.🌸" << RESET << std::endl;
 				return;
 			}
-			std::cout << PINK << "Focus! 'y' or 'n'." << RESET << std::endl;
+			std::cout << PURPLE << "Focus! 'y' or 'n'." << RESET << std::endl;
 		}
 	}
 	_contacts[_nextContactIndex].setInformations();

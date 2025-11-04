@@ -36,7 +36,7 @@ int	main(void)
 			break;
 		}
 		else
-			std::cout << PURPLE << "Bouncer says no 🚫 Use ADD, SEARCH, or EXIT instead." << RESET << std::endl;
+			std::cout << PURPLE << "Oopsie 💕 Only ADD, SEARCH, or EXIT" << RESET << std::endl;
 		phonebook.printOptions();
 	}
 	std::cout << ORANGE << "Phonebook closed, silence is golden.✨" << RESET << std::endl;
