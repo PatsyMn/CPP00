@@ -46,15 +46,23 @@ void Contact::setInformations(void)
 	{
 		while (true)
 		{
-			std::cout << PINK << "Enter " << _fields[i] << ": " << RESET;
-			std::string input;
 			if (std::cin.eof())
 			{
 				std::cout << ORANGE << std::endl << "Phonebook closed, silence is golden.✨" << std::endl;
 				std::exit(0);
 			}
-			std::cout << PURPLE << "Come on, no blanks! Enter the contact info." << std::endl;
-			continue;
+			std::string input;
+			std::cout << PINK << "Enter " << _fields[i] << ": " << RESET;
+			if (!std::getline(std::cin, input))
+			{
+				std::cout << ORANGE << std::endl << "Phonebook closed, silence is golden.✨" << std::endl;
+				std::exit(0);
+			}
+			if (input.empty())
+			{
+				std::cout << PURPLE << "Come on, no blanks! Enter the contact info." << std::endl;
+				continue;
+			}
 			if ((i == first_name || i == last_name || i == nickname) && !isNameValid(input))
 			{
 				std::cout << ORANGE << "Letters only, honey 💕" << RESET << std::endl;
