@@ -19,7 +19,7 @@ int main(int ac, char **av)
 		for (int i = 1; i < ac; i++)
 		{
 			std::string str = av[i];
-			std::cout << toUpper(str) << " ";
+			std::cout << toUpper(str);
 		}
 		std::cout << std::endl;
 	}
