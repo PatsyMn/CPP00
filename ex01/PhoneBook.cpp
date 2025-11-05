@@ -112,9 +112,9 @@ void PhoneBook::searchContact() const
 			std::cout << ORANGE << "Try a real number! (for me 0 is sooo not it 😚)" << RESET << std::endl;
 			continue;
 		}
-		std::istringstream iss(user_input);
-		iss >> index;
-		if (!iss.fail() && index >= 1 && index <= _totalContacts)
+		std::istringstream user_stream(user_input);
+		user_stream >> index;
+		if (!user_stream.fail() && index >= 1 && index <= _totalContacts)
 		{
 			break;
 		}
