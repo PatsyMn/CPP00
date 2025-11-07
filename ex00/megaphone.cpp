@@ -20,8 +20,6 @@ int main(int ac, char **av)
 		{
 			std::string str = av[i];
 			std::cout << toUpper(str);
-			if (i != ac - 1) 
-				std::cout << " ";
 		}
 		std::cout << std::endl;
 	}
